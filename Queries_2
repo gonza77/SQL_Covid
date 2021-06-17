@@ -2,3 +2,16 @@ SELECT Location, date, total_cases, total_deaths, total_deaths/total_cases*100 a
 FROM PortfolioProject..CovidDeaths
 WHERE total_deaths IS NOT NULL and location like '%states%'
 order by 1
+
+-- Highiest infection rate by country
+SELECT location, population, MAX(total_cases/population*100) AS HighiestRate
+From CovidDeaths
+Group by location, population
+Order by 3 desc
+
+
+SELECT location, population, MAX(cast(Total_deaths as INT)) 
+FROM CovidDeaths
+WHERE continent IS NOT NULL
+GROUP BY  location, population
+ORDER by 3
