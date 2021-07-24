@@ -1,4 +1,3 @@
--- Covid project. Source Alex Freberg 
 
 *
 Covid 19 Data Exploration 
@@ -156,4 +155,5 @@ Join PortfolioProject..CovidVaccinations vac
 	and dea.date = vac.date
 where dea.continent is not null 
 
+-- Covid project. Source and thanks to Alex Freberg 
 
